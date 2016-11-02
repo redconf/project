@@ -12,10 +12,15 @@ fis.media('build')
     //对资源引用进行转换
     // domain: ''
 })
+
+
 //配置共用资源单独打包
-// .match('/static/folderA/**.js', {
-//  packTo: '/static/pkg/folderA.js'
+// .match('/libs/**.js', {
+//  packTo: '/pkg/libs.js'
 // })
+
+
+// fis-optimizer-uglify-js 插件进行压缩，已内置
 //配置文本替换
 // .match('**', {
 //     deploy: [
@@ -49,9 +54,13 @@ fis.media('build')
                                 }
                             }
                         })
-}).match('*.{js,css,png}',{
+}).match('*.{js,css}',{
     useHash:true,
     useSprite:true,
+    // optimizer:true
+}).match('*.{png}',{
+    // useHash:true,
+    // useSprite:true,
     // optimizer:true
 }).match('*', {
     //fis3-postpackager-loader 插件进行压缩，已内置

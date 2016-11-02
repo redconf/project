@@ -20,7 +20,7 @@ fis.media('build')
 // })
 
 
-// fis-optimizer-uglify-js 插件进行压缩，已内置
+// fis3-deploy-replace 插件进行转换，已内置
 //配置文本替换
 // .match('**', {
 //     deploy: [

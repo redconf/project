@@ -1,6 +1,21 @@
 fis.config.set('project.watch.usePolling', true);
 
 
+
+fis.set('project.ignore', [
+  'output/**',
+  'node_modules/**',
+  '.git/**',
+  '.svn/**',
+  'Vagrantfile',
+  '.vagrantfile/**',
+  '*.sh',
+  'fis-conf.js',
+  'package.json'
+]);
+
+
+
 //前端同学开发完自测没问题后，执行此命令,产出线上代码
 fis.media('build')
 .hook('relative')
@@ -87,7 +102,7 @@ fis.media('build')
         to: '../dist'
         })
     ]
-})
+});
 // .match('*', {
 //     //fis3-postpackager-loader 插件进行压缩，已内置
 //     deploy: fis.plugin('local-deliver', {

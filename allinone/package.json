@@ -21,7 +21,7 @@
     "bianma":"fis3-deploy-encoding",
     "guolv":"fis3-deploy-skip-packed"
   },
-  "__env":[
+  "__e_nv":[
     "fis3-preprocessor-js-require-file",
     "fis3-preprocessor-autoprefixer",
     "fis-optimizer-html-compress",
@@ -39,5 +39,5 @@
     "fis3-optimizer-imagemin",
     "fis3-postpackager-loader",
     "fis3-hook-relative",
-  ]
+  ],
 }

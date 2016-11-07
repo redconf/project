@@ -64,7 +64,19 @@ fis.media('build')
     // optimizer:true
 }).match('*', {
     //fis3-postpackager-loader 插件进行压缩，已内置
-    deploy: fis.plugin('local-deliver', {
-        to: '../build'
-    })
-});
+    deploy: [
+        fis.plugin('skip-packed', {
+        // 配置项
+        }),
+
+        fis.plugin('local-deliver', {
+        to: '../dist'
+        })
+    ]
+})
+// .match('*', {
+//     //fis3-postpackager-loader 插件进行压缩，已内置
+//     deploy: fis.plugin('local-deliver', {
+//         to: '../build'
+//     })
+// });

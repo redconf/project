@@ -12,7 +12,9 @@ fis.media('build')
     //对资源引用进行转换
     // domain: ''
 })
-
+.match('*.html', {
+  optimizer: fis.plugin('html-compress')
+})
 
 //配置共用资源单独打包
 // .match('/libs/**.js', {
@@ -35,7 +37,19 @@ fis.media('build')
     postpackager: fis.plugin('loader', {
         allInOne: true
     })
-}).match('*.js', {
+})
+.match('*.{css,less,scss}', {
+  preprocessor: fis.plugin('autoprefixer', {
+    "browsers": ["Android >= 2.1", "iOS >= 4", "ie >= 8", "firefox >= 15"],
+    "cascade": true
+  })
+})
+.match('*.js', {
+  parser: fis.plugin('jdists', {
+    remove: "debug"
+  })
+})
+.match('*.js', {
     // fis-optimizer-uglify-js 插件进行压缩，已内置
     optimizer: fis.plugin('uglify-js')
 }).match('*.css', {

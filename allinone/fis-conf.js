@@ -73,6 +73,10 @@ fis.media('build')
     remove: "debug"
   })
 })
+.match('*.inline.{css，sass,scss,less,js,jsx,ts,es,es6,html,tpl,tmpl}', {
+  // 设置 release 为 FALSE，不再产出此文件
+  release: false
+})
 .match('*.js', {
     // fis-optimizer-uglify-js 插件进行压缩，已内置
     optimizer: fis.plugin('uglify-js')

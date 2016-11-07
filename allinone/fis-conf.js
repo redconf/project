@@ -11,7 +11,16 @@ fis.set('project.ignore', [
   '.vagrantfile/**',
   '*.sh',
   'fis-conf.js',
-  'package.json'
+  'package.json',
+  '.env',
+  '.env.example',
+  'artisan',
+  'composer.json',
+  'gulpfile.js',
+  '.gitignore',
+  '*.xml',
+  '*.yml',
+  'test/**',
 ]);
 
 

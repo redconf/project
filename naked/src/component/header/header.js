@@ -1,1 +1,1 @@
-alert('header');
+console.info('common component:header');

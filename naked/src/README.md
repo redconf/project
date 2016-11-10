@@ -19,9 +19,9 @@
 
 > > >project1
 
-> > > component
+> > > > component
 
-> > > static
+> > > > static
 
 > > config
 
@@ -33,7 +33,7 @@
 
 > > > common
 
-> > > projectName
+> > > project1
 
 > > template
 

@@ -1,1 +1,0 @@
-console.info('common component:footer');

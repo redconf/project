@@ -1,0 +1,1 @@
+please checkout the targe branch to get the resource in the target dir.

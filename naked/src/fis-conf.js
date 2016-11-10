@@ -1,6 +1,6 @@
-fis.config.set('project.watch.usePolling', true);
-
-fis.set('project.ignore', [
+fis
+.config.set('project.watch.usePolling', true)
+.set('project.ignore', [
   'output/**',
   'node_modules/**',
   '.git/**',
@@ -19,7 +19,7 @@ fis.set('project.ignore', [
   '*.xml',
   '*.yml',
 //   'test/**',
-]);
+])
 
 
 
@@ -61,11 +61,7 @@ fis.set('project.ignore', [
 //         })
 //     ]
 // })
-
-
-
-fis
-.media('fedev')
+.media('fedev')//前端环境配置
 // .match('/static/**/*', {
 //     release: '$0'
 // })
@@ -73,41 +69,38 @@ fis
   postpackager: fis.plugin('loader', {})
 })
 
-.match('/conf/**', {
-    release: '/resource/common/$0'
+.match('/config/**', {
+    release: '$0',
 })
 .match('/^_/', {
     release: false
 })
-.match('/map.json', {
-    release: '/common/conf/$0'
-})
 .match('/page/(**)',{
-    release:'/resource/static/$0',
+    release:'/static/$1',
 })
 .match('/page/(**/*.html)', {// 所有页面放到 tempalte 目录下
     release: '/tempalte/$1',
 })
 
-.match('/static/(**)', {// 所有页面放到 tempalte 目录下
-    release: '/resource/common/static/$1',
+.match('/common/static/(**)', {// 所有页面放到 tempalte 目录下
+    release: '/static/common/static/$1',
 })
 
-.match('/component/**/*', {// component目录下的子目录所有资源被标注为组件
+.match('/common/component/**/*', {// component目录下的子目录所有资源被标注为组件
     isMod: true
 })
-.match('/component/**/*.js', {// component目录下的 子目录下的js 调用 jswrapper 进行自动化组件化封装
+.match('/common/component/**/*.js', {// component目录下的 子目录下的js 调用 jswrapper 进行自动化组件化封装
     postprocessor: fis.plugin('jswrapper', {
         type: 'commonjs'
     })
 })
-.match('/component/(**/*.{css,sass,scss,ts,jsx,js})', {
-    release: '/resource/common/$0'
+.match('/common/component/(**/*.{css,sass,scss,ts,jsx,js})', {
+    release: '/static/common/$0'
 })
-.match('/component/**/*.{html,tpl,tmpl}', {
+.match('/common/component/**/*.{html,tpl,tmpl}', {
     release: false
 })
-.match('/component/**/*.{html,css,sass,scss,ts,jsx,tpl,tmpl}', {
+.match('/common/component/**/*.{html,css,sass,scss,ts,jsx,tpl,tmpl}', {
     // release: '/static/$0'
 })
 
@@ -127,23 +120,3 @@ fis
         })
     ]
 })
-.set('project.ignore', [
-  'output/**',
-  'node_modules/**',
-  '.git/**',
-  '.svn/**',
-  'Vagrantfile',
-  '.vagrantfile/**',
-  '*.sh',
-  'fis-conf.js',
-  'package.json',
-  '.env',
-  '.env.example',
-  'artisan',
-  'composer.json',
-  'gulpfile.js',
-  '.gitignore',
-  '*.xml',
-  '*.yml',
-//   'test/**',
-])

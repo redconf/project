@@ -2,4 +2,4 @@
     @require "./body.js"
     @require "./body.css"
 -->
-<div class="body"></div>
+<div class="body">body</div>

@@ -2,4 +2,4 @@
     @require "./footer.js"
     @require "./footer.css"
 -->
-<div class="footer"></div>
+<div class="footer">footer</div>

@@ -7,18 +7,18 @@
     开发人员只需要维护src目录即可
     开发完成后执行build.sh会自动生成dist目录
 
-> src 源码
-> > common通用静态资源
-> > > static非组件
-> > > component组件
-> > page页面以及非通用资源
-> > > component非通用组件
-> > > static非通用非组件
-> > config全局配置
+> src <源码>
+> > common <通用静态资源>
+> > > static <非组件>
+> > > component <组件>
+> > page <页面以及非通用资源>
+> > > component <非通用组件>
+> > > static <非通用非组件>
+> > config <全局配置>
 
-> build 生产代码
-> > config全局配置
-> > static静态资源
-> > > common通用资源
-> > > projectName非通用独立项目
-> > template模板文件
+> build  <生产代码>
+> > config <全局配置>
+> > static <静态资源>
+> > > common <通用资源>
+> > > projectName <非通用独立项目>
+> > template <模板文件>

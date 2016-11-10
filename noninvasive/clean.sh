@@ -1,1 +1,0 @@
-sudo fis3 server clean

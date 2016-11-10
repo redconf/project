@@ -1,1 +1,1 @@
-please checkout the targe branch to get the resource in the target dir.
+please checkout the target branch to get the resource

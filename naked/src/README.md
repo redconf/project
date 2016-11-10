@@ -10,10 +10,12 @@
 > src
 
 > > common
+
 > > > static
 > > > component
 
 > > page
+
 > > > component
 > > > static
 

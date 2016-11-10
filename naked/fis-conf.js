@@ -1,8 +1,8 @@
 fis
 .config.set('project.watch.usePolling', true)
 .set('project.ignore', [
-  'output/**',
-//'node_modules/**',
+  '/output/**',
+  '/node_modules/**',
   '.git/**',
   '.svn/**',
   'Vagrantfile',
@@ -18,8 +18,8 @@ fis
   '.gitignore',
   '*.xml',
   '*.yml',
-  'README.md'
-//'test/**',
+  'README.md',
+  '/test/**',
 ])
 
 
@@ -70,38 +70,38 @@ fis
   postpackager: fis.plugin('loader', {})
 })
 
-.match('/config/**', {
-    release: '$0',
+.match('/src/(config/**)', {
+    release: '$1',
 })
-.match('/^_/', {
+.match('/src/^_/', {
     release: false
 })
-.match('/page/(**)',{
+.match('/src/page/(**)',{
     release:'/static/$1',
 })
-.match('/page/(**/*.html)', {// 所有页面放到 tempalte 目录下
+.match('/src/page/(**/*.html)', {// 所有页面放到 tempalte 目录下
     release: '/tempalte/$1',
 })
 
-.match('/common/static/(**)', {// 所有页面放到 tempalte 目录下
+.match('/src/common/static/(**)', {// 所有页面放到 tempalte 目录下
     release: '/static/common/static/$1',
 })
 
-.match('/common/component/**/*', {// component目录下的子目录所有资源被标注为组件
+.match('/src/common/component/**/*', {// component目录下的子目录所有资源被标注为组件
     isMod: true
 })
-.match('/common/component/**/*.js', {// component目录下的 子目录下的js 调用 jswrapper 进行自动化组件化封装
+.match('/src/common/component/**/*.js', {// component目录下的 子目录下的js 调用 jswrapper 进行自动化组件化封装
     postprocessor: fis.plugin('jswrapper', {
         type: 'commonjs'
     })
 })
-.match('/common/component/(**/*.{css,sass,scss,ts,jsx,js})', {
+.match('/src/common/component/(**/*.{css,sass,scss,ts,jsx,js})', {
     release: '/static/common/$0'
 })
-.match('/common/component/**/*.{html,tpl,tmpl}', {
+.match('/src/common/component/**/*.{html,tpl,tmpl}', {
     release: false
 })
-.match('/common/component/**/*.{html,css,sass,scss,ts,jsx,tpl,tmpl}', {
+.match('/src/common/component/**/*.{html,css,sass,scss,ts,jsx,tpl,tmpl}', {
     // release: '/static/$0'
 })
 

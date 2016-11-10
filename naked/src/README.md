@@ -12,11 +12,15 @@
 > > common
 
 > > > static
+
 > > > component
 
 > > page
 
+> > >project1
+
 > > > component
+
 > > > static
 
 > > config
@@ -28,6 +32,9 @@
 > > static
 
 > > > common
+
 > > > projectName
 
 > > template
+
+> > > project1

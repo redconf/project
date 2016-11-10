@@ -2,7 +2,7 @@ fis
 .config.set('project.watch.usePolling', true)
 .set('project.ignore', [
   'output/**',
-  'node_modules/**',
+//'node_modules/**',
   '.git/**',
   '.svn/**',
   'Vagrantfile',
@@ -18,7 +18,8 @@ fis
   '.gitignore',
   '*.xml',
   '*.yml',
-//   'test/**',
+  'README.md'
+//'test/**',
 ])
 
 

@@ -8,17 +8,24 @@
     开发完成后执行build.sh会自动生成dist目录
 
 > src
+
 > > common
 > > > static
 > > > component
+
 > > page
 > > > component
 > > > static
+
 > > config
 
 > build
+
 > > config
+
 > > static
+
 > > > common
 > > > projectName
+
 > > template
